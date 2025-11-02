@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: #191919;
+    background-color: #fff;
+}
+
+
+.intro {
+    z-index: 1;
+    background-color: #fff;
+    border-bottom: 0.8px solid #cdcdcd;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* adjust amount as needed */
+}
+.footer {
+    max-width: 500px;        /* matches your content width */
+    margin: 40px auto 20px;  /* spacing above and below */
+    display: flex;
+    justify-content: space-between; /* left/right alignment */
+    align-items: center;
+    font-size: 12px;
+    color: #555;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #191919;
+    font-weight: 400;
+}
+
+.footer-link:hover {
+    color: #0070f3;  /* accent color on hover */
+    text-decoration: underline;
+}
+
+
+
+h1 {
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: -8px;
+}
+
+.subhead {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+
+.modern-link {
+    text-underline-offset: 2px;
+    -webkit-text-decoration: underline #33333340;
+    text-decoration: underline #33333340;
+    text-decoration-thickness: .8px;
+    font-size: 12px;
+    color: #191919;
+}
+
+.modern-link:hover {
+    color: #0070f3;
+    /* or your accent color */
+}
+
+.projects {
+    max-width: 500px;
+    margin: 40px auto 80px;
+    /* space above and below */
+}
+
+.projects h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #191919;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* For project grid thumbnails only */
+.project-card img {
+  width: 100%;
+  height: auto; /* keeps original image sharp */
+  border-radius: 6px;
+  display: block;
+  object-fit: contain; /* shows full image without cropping */
+}
+
+
+.project-card h3 {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: #191919;
+}
+
+.project-card .tools {
+    font-size: 12px;
+    font-weight: 400;
+    color: #555;
+    margin: 0;
+}
+
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9; /* sets a consistent shape (you can adjust) */
+  object-fit: cover; /* crops edges without distortion */
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 140px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.slideshow .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.slideshow .slide.active {
+    opacity: 1;
+}
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+ 
+}
+.project-detail {
+    max-width: 500px;
+    margin: 40px auto 80px;
+}
+
+.project-detail h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #191919;
+}
+
+.project-detail .description {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.project-images {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.project-images img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  display: block;
+}
+.project-iframe {
+    max-width: 500px;       /* same as intro/project width */
+    margin: 16px auto;      /* centers horizontally */
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.project-iframe iframe {
+    width: 100%;
+    height: 300px;          /* adjust height as needed */
+    border: 0;
+}
+.project-gif {
+  max-width: 500px; /* same as intro and project */
+  margin: 24px auto; /* center it and add spacing */
+  text-align: center;
+}
+
+.project-gif img {
+  width: 100%; /* responsive */
+  height: auto; /* maintain aspect ratio */
+  border-radius: 6px; /* optional, matches project images */
+}
+
+.project-media {
+  max-width: 500px;      /* same width as intro/project */
+  margin: 24px auto;     /* center horizontally and add spacing */
+  text-align: center;
+}
+
+.project-media img {
+  width: 100%;           /* responsive to container width */
+  height: auto;          /* maintain aspect ratio */
+  border-radius: 6px;    /* optional, matches project images */
+  display: block;        /* ensures proper spacing */
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+    gap: 10px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}
+
+
+
+/* Make portfolio items stack on mobile */
+@media (max-width: 500px) {
+  .project-grid {
+    grid-template-columns: 1fr; /* one column instead of two */
+    gap: 16px; /* slightly smaller spacing for mobile */
+  }
+
+}
+
+@media (max-width: 500px) {
+  .intro,
+  .projects,
+  .footer,
+  .project-detail,
+  .project-iframe,
+  .project-media,
+  .project-gif
+    .project-images {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
